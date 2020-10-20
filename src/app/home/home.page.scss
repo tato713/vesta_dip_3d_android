@@ -27,19 +27,21 @@
 }
 ion-title{
   font-style: normal;
+  font-family: 'Ubuntu', sans-serif;
 }
 ion-slides {
   height: 100%;
-  background-image: url(https://www.klaviyo.com/wp-content/uploads/2016/09/abstract-background-1024x273.jpg);
+ // background-image: url(https://www.klaviyo.com/wp-content/uploads/2016/09/abstract-background-1024x273.jpg);
 }
 ion-item {
-  box-shadow: lightslategrey; 
-  align-content: center;
+  //box-shadow: red; 
+  text-align: center;
+  object-position: center;
   
 }
 
 ion-label {
-  color: darkslategray;
+ color: darkslategray;
  
 
 }
