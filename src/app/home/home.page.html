@@ -1,8 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-    Vesta 3D - diseño, impresión y prototipado
+    Vesta 3D - diseño, impresión y prototipado 
     </ion-title>
+    <p> Envíos a todo el país</p>  
   </ion-toolbar>
 </ion-header> 
 
@@ -19,22 +20,36 @@
     <!-- <ion-slides mode="ios" pager="ios" scrollbar="ios"> -->
       
     <ion-slides pager>
-      <ion-slide style="background-color:forestgreen">
+      <ion-slide>
         <h1>1</h1>
         <p>inicio pintoresco </p>
       </ion-slide>
-      <ion-slide style="background-color: greenyellow;">
+      <ion-slide>
         <h1>2</h1>
       </ion-slide>
-      <ion-slide style="background-color:red;">
+      <ion-slide style="font-size: x-large;" >
         <h1>3</h1>
-      <ion-item> 
-        <ion-label position="stacked"> Catálogo</ion-label>
+        <ion-list lines="inset">
+      
+      <ion-item button onclick="() => { }"> 
+        <ion-label position="stacked"> 
+          <h1>Servicios</h1>
+        </ion-label>
       </ion-item>
-      <ion-item> 
-        <ion-label position="stacked"> Servicios</ion-label>
+      <ion-item button onclick="() => { }" > 
+        <ion-label position="stacked">
+          <h1>Catálogo</h1> 
+          
+        </ion-label>
       </ion-item>
+      <ion-item button onclick="() => { }"> 
+        <ion-label position="stacked">
+          <h1>Sobre nosotros</h1>
+        </ion-label>
+      </ion-item>
+        </ion-list>
       </ion-slide>
+    
     </ion-slides>
   <!-- </div> -->
 </ion-content>
