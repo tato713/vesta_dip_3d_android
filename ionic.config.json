@@ -1,0 +1,7 @@
+{
+  "name": "tpf",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
