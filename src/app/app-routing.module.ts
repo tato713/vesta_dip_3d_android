@@ -14,7 +14,27 @@ const routes: Routes = [
   {
     path: 'catalogo',
     loadChildren: () => import('./catalogo/catalogo.module').then( m => m.CatalogoPageModule)
+  },  {
+    path: 'servicios',
+    loadChildren: () => import('./servicios/servicios.module').then( m => m.ServiciosPageModule)
   },
+  {
+    path: 'informacion',
+    loadChildren: () => import('./informacion/informacion.module').then( m => m.InformacionPageModule)
+  },
+  {
+    path: 'producto1',
+    loadChildren: () => import('./producto1/producto1.module').then( m => m.Producto1PageModule)
+  },
+  {
+    path: 'producto2',
+    loadChildren: () => import('./producto2/producto2.module').then( m => m.Producto2PageModule)
+  },
+  {
+    path: 'producto3',
+    loadChildren: () => import('./producto3/producto3.module').then( m => m.Producto3PageModule)
+  },
+
 
 ];
 
