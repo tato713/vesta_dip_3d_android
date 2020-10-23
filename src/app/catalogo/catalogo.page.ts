@@ -17,14 +17,12 @@ export class CatalogoPage implements OnInit {
   
   constructor(private modSrv: ModeloService,
     private alContrl: AlertController,
-    private lodading: LoadingController) {
-     
-  }
+    private loading: LoadingController) {  }
   public async ngOnInit() {
     
     this.carrito = this.modSrv.carrito;
     
-      const loading = await this.lodading.create();   
+      const loading = await this.loading.create();   
       loading.present();
     
  
@@ -39,7 +37,6 @@ export class CatalogoPage implements OnInit {
 
   public async verCarrito(){
   
-  // hay que hacer la logica de los materiales y demas aca
     let total = 0;
     let cuerpo = "";
     for (let prod of this.modSrv.carrito) {
