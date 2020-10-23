@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'producto3',
     loadChildren: () => import('./producto3/producto3.module').then( m => m.Producto3PageModule)
   },
+  {
+    path: 'modelo',
+    loadChildren: () => import('./modelo/modelo.module').then( m => m.ModeloPageModule)
+  },
 
 
 ];

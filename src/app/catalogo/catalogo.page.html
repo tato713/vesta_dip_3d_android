@@ -1,8 +1,12 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Catálogo</ion-title>
   </ion-toolbar>
 </ion-header>
+
 
 <!-- <ion-content>
   <ion-list inset="true">
@@ -19,15 +23,16 @@
       <ion-label>Producto 4</ion-label>
     </ion-item>
   </ion-list> -->
-  <ion-list>
-    <ion-item *ngFor="let item of modelos" [routerLink]="['/home',item.id]">
-      <ion-avatar slot="start">
-        <img [src]="item.imagen"  />
-      </ion-avatar>
-      <ion-label>{{item.nombre}}</ion-label>
-      <ion-label>{{item.precio}}</ion-label>
-      <ion-label *ngIf="item.cantidad==0" color='danger'>SIN STOCK</ion-label>
-      <ion-label *ngIf="item.cantidad>0" color="primary">CON STOCK</ion-label>
-    </ion-item>  
-  </ion-list>
-</ion-content>
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let item of modelos" [routerLink]="['/modelo',item.id]">
+        <ion-avatar slot="start">
+          <img [src]="item.imagen"  />
+        </ion-avatar>
+        <ion-label>{{item.nombre}}</ion-label>
+        <ion-label>{{item.precio}}</ion-label>
+        <ion-label *ngIf="item.cantidad==0" color='danger'>SIN STOCK</ion-label>
+        <ion-label *ngIf="item.cantidad>0" color="primary">CON STOCK</ion-label>
+      </ion-item>  
+    </ion-list>
+  </ion-content>
