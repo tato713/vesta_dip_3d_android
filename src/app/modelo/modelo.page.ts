@@ -22,6 +22,14 @@ export class ModeloPage implements OnInit {
             this.modelo = datos;
           });
     });
+  } 
+  public getPrecio(): number{
+    return this.modelo.precio * this.modelo.material.precio;
   }
+
+  public agregarCarrito(): void{
+    this.modSrv.carrito.push(this.modelo);
+  }
+
 
 }

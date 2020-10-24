@@ -11,5 +11,24 @@
   <ion-item>
 
   </ion-item>
+  <ion-item>
+    <div class="contenedor">
+      <ion-img class="tamañoImg" [src]="producto.imagen"></ion-img>
+      <ion-text color="secondary">
+        <h1>Awesome text</h1>
+      </ion-text>
+    </div>
+  </ion-item>
+
+  <ion-item >
+    <ion-text color="dark">
+      <p>$getPrecio()</p><!-- no me gusta este estilo h1 es para titulos-->
+    </ion-text>
+  </ion-item><!-- 
+  document.getElementById("demo").innerHTML = getPrecio(); -->
+  <ion-item>
+    <ion-label >Cantidad:</ion-label>
+    <ion-input type="number" placeholder="({{producto.cantidad}} disponibles)"></ion-input>
+  </ion-item>
 
 </ion-content>
