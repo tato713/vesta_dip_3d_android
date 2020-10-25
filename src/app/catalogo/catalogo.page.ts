@@ -43,13 +43,13 @@ export class CatalogoPage implements OnInit {
       cuerpo = cuerpo + prod.nombre + "<br>";
       total = total + prod.precio;
     }
-    const cuerpoAleta = {
+    const cuerpoAlerta = {
       header: "Lista de producto",
       
       message: cuerpo+"<br>Precio Total "+total,
       buttons: ["ok"]
     };
-    const alerta = await this.alContrl.create(cuerpoAleta);
+    const alerta = await this.alContrl.create(cuerpoAlerta);
 
     await alerta.present();
 

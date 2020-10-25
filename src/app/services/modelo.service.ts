@@ -8,7 +8,7 @@ import { Material } from '../model/material';
 })
 export class ModeloService {
 
-  private materiales: Array<Material>=[{
+  public materiales: Array<Material>=[{
     "id": "1",
     "nombre": "PLA",
     "precio": 1,
@@ -34,9 +34,11 @@ export class ModeloService {
     "precio": 1.5,
     "imagen": ""
 
-  }]
+  }];
   
-  public carrito: Array<Modelo> = [];
+  public carrito: Array<Modelo> = [
+
+  ];
   constructor(private httpClien:HttpClient) { }
 
   public obtenerTodos() {

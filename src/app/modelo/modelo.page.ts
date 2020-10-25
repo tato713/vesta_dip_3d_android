@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ModeloService } from '../services/modelo.service';
 import { Modelo } from '../model/modelo';
+import { Material } from '../model/material';
 
 @Component({
   selector: 'app-modelo',
@@ -11,6 +12,7 @@ import { Modelo } from '../model/modelo';
 export class ModeloPage implements OnInit {
 
   private modelo=new Modelo();
+  private material=new Material();
   constructor(private activeteRoute: ActivatedRoute
     , private modSrv: ModeloService) { }
 
