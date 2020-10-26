@@ -18,6 +18,8 @@ export class CatalogoPage implements OnInit {
   constructor(private modSrv: ModeloService,
     private alContrl: AlertController,
     private loading: LoadingController) {  }
+
+
   public async ngOnInit() {
     
     this.carrito = this.modSrv.carrito;
@@ -25,7 +27,7 @@ export class CatalogoPage implements OnInit {
       const loading = await this.loading.create();   
       loading.present();
     
- 
+    
     
 
     this.modSrv.obtenerTodos().subscribe(datos => {
@@ -35,26 +37,26 @@ export class CatalogoPage implements OnInit {
     });
   }
 
-  public async verCarrito(){
+  // public async verCarrito(){
   
-    let total = 0;
-    let cuerpo = "";
-    for (let prod of this.modSrv.carrito) {
-      cuerpo = cuerpo + prod.nombre + "<br>";
-      total = total + prod.precio;
-    }
-    const cuerpoAlerta = {
-      header: "Lista de producto",
+  //   let total = 0;
+  //   let cuerpo = "";
+  //   for (let prod of this.modSrv.carrito) {
+  //     cuerpo = cuerpo + prod.nombre + "<br>";
+  //     total = total + prod.precio;
+  //   }
+  //   const cuerpoAlerta = {
+  //     header: "Lista de producto",
       
-      message: cuerpo+"<br>Precio Total "+total,
-      buttons: ["ok"]
-    };
-    const alerta = await this.alContrl.create(cuerpoAlerta);
+  //     message: cuerpo+"<br>Precio Total "+total,
+  //     buttons: ["ok"]
+  //   };
+    // const alerta = await this.alContrl.create(cuerpoAlerta);
 
-    await alerta.present();
+    // await alerta.present();
 
  
     
-  }
+  //}
 
 }

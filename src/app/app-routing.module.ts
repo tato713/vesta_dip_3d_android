@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: '',
@@ -13,20 +13,37 @@ const routes: Routes = [
   },
   {
     path: 'catalogo',
-    loadChildren: () => import('./catalogo/catalogo.module').then( m => m.CatalogoPageModule)
+    children: [{
+      path: "",
+      loadChildren: () => import('./catalogo/catalogo.module').then(m => m.CatalogoPageModule)
+    },
+    {
+      path: ":id",
+      loadChildren: () => import('./modelo/modelo.module').then(m => m.ModeloPageModule)
+
+    }]
+
   },
   {
     path: 'servicios',
-    loadChildren: () => import('./servicios/servicios.module').then( m => m.ServiciosPageModule)
+    loadChildren: () => import('./servicios/servicios.module').then(m => m.ServiciosPageModule)
   },
   {
     path: 'informacion',
-    loadChildren: () => import('./informacion/informacion.module').then( m => m.InformacionPageModule)
+    loadChildren: () => import('./informacion/informacion.module').then(m => m.InformacionPageModule)
   },
- 
+
   {
-    path: 'modelo',
-    loadChildren: () => import('./modelo/modelo.module').then( m => m.ModeloPageModule)
+    path: 'modelo', 
+    children: [{
+      path: "",
+      loadChildren: () => import('./catalogo/catalogo.module').then(m => m.CatalogoPageModule)
+    },
+    {
+      path: ":id",
+      loadChildren: () => import('./modelo/modelo.module').then(m => m.ModeloPageModule)
+
+    }]
   },
 
 

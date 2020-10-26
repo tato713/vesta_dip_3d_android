@@ -42,10 +42,10 @@ export class ModeloService {
   constructor(private httpClien:HttpClient) { }
 
   public obtenerTodos() {
-    return this.httpClien.get<Modelo[]>("http://192.168.0.107:3000/modelos");
+    return this.httpClien.get<Modelo[]>("http://localhost:3000/modelos");
   }
   public obtenerPorId(id: string) {
-     return this.httpClien.get<Modelo>("http://192.168.0.107:3000/modelos/"+id);
+     return this.httpClien.get<Modelo>("http://localhost:3000/modelos/"+id);
   }
 
   public putCarrito(prod: Modelo) {

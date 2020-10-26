@@ -8,34 +8,29 @@
 </ion-header>
 
 <ion-content>
-  <ion-item>
-
-  </ion-item>
+  
   <ion-item>
     <div class="contenedor">
-      <ion-img class="tamañoImg" [src]="modelo.imagen"></ion-img>
-      <ion-text color="secondary">
-        <h1>Awesome text</h1>
-      </ion-text>
+      <ion-img [src]="modelo.imagen"></ion-img>
     </div>
   </ion-item>
-  <ion-item>
+<!--   <ion-item>
     <ion-label>Material</ion-label>
     <ion-select  *ngFor="let item of materiales">
       <ion-select-option modelo.material=item>{{item.nombre}}</ion-select-option>
     </ion-select>
-  </ion-item>
-
+  </ion-item> -->
+<!-- 
   <ion-item >
     <ion-text color="dark">
-      <p>$getPrecio()</p><!-- no me gusta este estilo h1 es para titulos-->
-      <!-- <p>${{modelo.precio * modelo.material.precio}}  -->
+      <p>${{getPrecio()}}</p>
+      <p>${{modelo.precio * modelo.material.precio}} 
     </ion-text>
-  </ion-item>
+  </ion-item> -->
   
-  <ion-button (click)="agregarCarrito()" expand="block" >
+ <!--  <ion-button (click)="agregarCarrito()" expand="block" >
     <ion-icon slot="start" name="cart"></ion-icon>
     Agregar al carrito
-  </ion-button>
+  </ion-button> -->
 
 </ion-content>
