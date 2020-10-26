@@ -4,6 +4,10 @@
     Vesta 3D - diseño, impresión y prototipado 
     </ion-title>
     <p> Envíos a todo el país</p>  
+    <ion-avatar slot="end">
+       <ion-badge class="cantidad pedido">pedido</ion-badge>
+     <!-- <ion-badge class="cantidad pedido">{{carrito.length}}</ion-badge> -->
+    </ion-avatar>
     <ion-button slot="end" shape="round" color="medium">
       <ion-icon name="bag-handle-outline"></ion-icon>
     </ion-button>
@@ -12,16 +16,6 @@
 </ion-header> 
 
 <ion-content [fullscreen]="true">
-  <!-- <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header> -->
-
-  <!-- <div id="container"> -->
- <!--    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
-    <!-- <ion-slides mode="ios" pager="ios" scrollbar="ios"> -->
       
     <ion-slides pager>
       <ion-slide>

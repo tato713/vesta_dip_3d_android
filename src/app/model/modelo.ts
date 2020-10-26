@@ -7,4 +7,5 @@ export class Modelo{
     public imagen: string;
     public cantidad: number;
     public material: Material;
+    public link: string;
   }

@@ -12,27 +12,23 @@ export class ModeloService {
     "id": "1",
     "nombre": "PLA",
     "precio": 1,
-    "imagen": ""
   },
   {
     "id": "2",
     "nombre": "ABS",
     "precio": 1.2,
-    "imagen": ""
 
   },
   {
     "id": "3",
     "nombre": "TPU",
     "precio": 3,
-    "imagen": ""
 
   },
   {
     "id": "4",
     "nombre": "PETG",
     "precio": 1.5,
-    "imagen": ""
 
   }];
   
@@ -48,8 +44,8 @@ export class ModeloService {
      return this.httpClien.get<Modelo>("http://localhost:3000/modelos/"+id);
   }
 
-  public putCarrito(prod: Modelo) {
-   // this.modelos.push(prod);
+  public putCarrito(mod: Modelo) {
+    this.carrito.push(mod);
   
   }
   public getCarrito() {

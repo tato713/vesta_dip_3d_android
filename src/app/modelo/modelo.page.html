@@ -1,36 +1,50 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button> </ion-back-button>
     </ion-buttons>
     <ion-title>{{modelo.nombre}}</ion-title>
+    <ion-avatar slot="end">
+      <ion-badge class="cantidad pedido">pedido</ion-badge>
+    <!-- <ion-badge class="cantidad pedido">{{carrito.length}}</ion-badge> -->
+   </ion-avatar>
+   <ion-button slot="end" shape="round" color="medium">
+     <ion-icon name="bag-handle-outline"></ion-icon>
+   </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   
-  <ion-item>
+  <ion-item >
     <div class="contenedor">
       <ion-img [src]="modelo.imagen"></ion-img>
     </div>
   </ion-item>
-<!--   <ion-item>
+    
+  <ion-item >
+    <ion-text color="dark" (ionClic)="openWebpage(modelo.link)" ><!-- esto no funciona -->
+      <p>Modelo disponible en <a href="modelo.link">Thingiverse</a>.</p> <!-- esto no funciona -->      
+    </ion-text>
+  </ion-item>
+ 
+  <ion-item>
     <ion-label>Material</ion-label>
-    <ion-select  *ngFor="let item of materiales">
-      <ion-select-option modelo.material=item>{{item.nombre}}</ion-select-option>
+    <ion-select placeholder="Seleccione" (ionChange)="setMaterial(value)" interface="popover">
+      <ion-select-option [value]="item" *ngFor="let item of materiales" >{{item.nombre}}</ion-select-option>
     </ion-select>
-  </ion-item> -->
-<!-- 
+  </ion-item>
+  
   <ion-item >
     <ion-text color="dark">
       <p>${{getPrecio()}}</p>
-      <p>${{modelo.precio * modelo.material.precio}} 
+      
     </ion-text>
-  </ion-item> -->
+  </ion-item>
   
- <!--  <ion-button (click)="agregarCarrito()" expand="block" >
-    <ion-icon slot="start" name="cart"></ion-icon>
-    Agregar al carrito
-  </ion-button> -->
+  <ion-button (click)="agregarCarrito()" expand="block" color="dark">
+    <ion-icon slot="start" name="bag-handle-outline"></ion-icon>
+    Agregar pedido
+  </ion-button>
 
 </ion-content>

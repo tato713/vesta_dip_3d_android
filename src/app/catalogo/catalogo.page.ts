@@ -37,20 +37,21 @@ export class CatalogoPage implements OnInit {
     });
   }
 
-  // public async verCarrito(){
+  public async verCarrito(){
   
-  //   let total = 0;
-  //   let cuerpo = "";
-  //   for (let prod of this.modSrv.carrito) {
-  //     cuerpo = cuerpo + prod.nombre + "<br>";
-  //     total = total + prod.precio;
-  //   }
-  //   const cuerpoAlerta = {
-  //     header: "Lista de producto",
+    let total = 0;
+    let cuerpo = "";
+    for (let prod of this.modSrv.carrito) {
+      cuerpo = cuerpo + prod.nombre + "<br>";
+      total = total + prod.precio;
+    }
+  }
+    // const cuerpoAlerta = {
+    //   header: "Lista de producto",
       
-  //     message: cuerpo+"<br>Precio Total "+total,
-  //     buttons: ["ok"]
-  //   };
+    //   message: cuerpo+"<br>Precio Total "+total,
+    //   buttons: ["ok"]
+    // };
     // const alerta = await this.alContrl.create(cuerpoAlerta);
 
     // await alerta.present();
