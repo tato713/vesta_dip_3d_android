@@ -9,24 +9,24 @@ import { Material } from '../model/material';
 export class ModeloService {
 
   public materiales: Array<Material>=[{
-    "id": "1",
+    "id": 0,
     "nombre": "PLA",
     "precio": 1,
   },
   {
-    "id": "2",
+    "id": 1,
     "nombre": "ABS",
     "precio": 1.2,
 
   },
   {
-    "id": "3",
+    "id": 2,
     "nombre": "TPU",
     "precio": 3,
 
   },
   {
-    "id": "4",
+    "id": 3,
     "nombre": "PETG",
     "precio": 1.5,
 

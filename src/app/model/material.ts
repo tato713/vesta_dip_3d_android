@@ -1,5 +1,5 @@
 export class Material{
-    public id:string;
+    public id:number;
     public nombre: string;
     public precio: number;
   }

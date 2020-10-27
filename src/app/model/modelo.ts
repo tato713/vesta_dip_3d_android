@@ -5,7 +5,7 @@ export class Modelo{
     public nombre: string;
     public precio: number;
     public imagen: string;
-    public cantidad: number;
-    public material: Material;
+    public cantidad: number=1;
+    public material: number=0;
     public link: string;
   }
