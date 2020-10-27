@@ -7,8 +7,8 @@
     <ion-avatar slot="end">
       <ion-badge class="cantidad pedido">pedido</ion-badge>
       <!-- <ion-badge class="cantidad pedido">{{carrito.length}}</ion-badge> -->
-    </ion-avatar>
-    <ion-button slot="end" shape="round" color="medium">
+    </ion-avatar >
+    <ion-button slot="end" shape="round" color="medium" [routerLink]="['/carrito']">
       <ion-icon name="bag-handle-outline"></ion-icon>
     </ion-button>
   </ion-toolbar>
@@ -36,12 +36,12 @@
   <ion-item>
     <ion-label>Cantidad:</ion-label>
     <!-- <ion-input  type="number" [(ngModel)]="modelo.cantidad" min="1" value="{{modelo.cantidad}}" ></ion-input> -->
-    <ion-select [(ngModel)]="modelo.cantidad" interface="popover" [value]="modelo.cantidad">
+    <ion-select [value]="getCantidad()" [(ngModel)]="modelo.cantidad" interface="popover" >
       <ion-select-option [value]="item" *ngFor="let item of cantidades">{{item}}</ion-select-option>
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label>   {{modelo.cantidad}} </ion-label>
+    <ion-label type ="number">   {{getCantidad()}} </ion-label>
     <ion-label> {{materiales[modelo.material].nombre}} </ion-label>
   </ion-item>
 
@@ -52,7 +52,8 @@
     </ion-text>
   </ion-item>
 
-  <ion-button (click)="agregarCarrito()" expand="block" color="dark">
+  <!-- <ion-button (click)="presentAlert(getCantidad())" expand="block" color="dark"> -->
+    <ion-button (click)="agregarCarrito()" expand="block" color="dark">
     <ion-icon slot="start" name="bag-handle-outline"></ion-icon>
     Agregar pedido
   </ion-button>

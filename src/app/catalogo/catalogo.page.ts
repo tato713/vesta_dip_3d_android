@@ -12,7 +12,7 @@ import { ModeloService } from '../services/modelo.service';
 export class CatalogoPage implements OnInit {
 
   private modelos;
-  private carrito: Array<Modelo>=[];
+  // private carrito: Array<Modelo>=[];
   private cantidad = 0;
   
   constructor(private modSrv: ModeloService,
@@ -22,7 +22,7 @@ export class CatalogoPage implements OnInit {
 
   public async ngOnInit() {
     
-    this.carrito = this.modSrv.carrito;
+    // this.carrito = this.modSrv.carrito;
     
       const loading = await this.loading.create();   
       loading.present();
@@ -37,15 +37,15 @@ export class CatalogoPage implements OnInit {
     });
   }
 
-  public async verCarrito(){
+  // public async verCarrito(){
   
-    let total = 0;
-    let cuerpo = "";
-    for (let prod of this.modSrv.carrito) {
-      cuerpo = cuerpo + prod.nombre + "<br>";
-      total = total + prod.precio;
-    }
-  }
+  //   let total = 0;
+  //   let cuerpo = "";
+  //   for (let prod of this.modSrv.carrito) {
+  //     cuerpo = cuerpo + prod.nombre + "<br>";
+  //     total = total + prod.precio;
+  //   }
+  // }
     // const cuerpoAlerta = {
     //   header: "Lista de producto",
       
