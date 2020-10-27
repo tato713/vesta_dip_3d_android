@@ -5,7 +5,7 @@
     </ion-buttons>
     <ion-title>{{modelo.nombre}}</ion-title>
     <ion-avatar slot="end">
-      <ion-badge class="cantidad pedido">pedido</ion-badge>
+      <ion-badge class="cantidad pedido">{{modSrv.getCantidadTotal()}}</ion-badge>
       <!-- <ion-badge class="cantidad pedido">{{carrito.length}}</ion-badge> -->
     </ion-avatar >
     <ion-button slot="end" shape="round" color="medium" [routerLink]="['/carrito']">
@@ -17,7 +17,7 @@
 <ion-content>
 
   <ion-item>
-    <div class="contenedor">
+    <div class="oval">
       <ion-img [src]="modelo.imagen"></ion-img>
       <ion-text color="dark" (ionClic)="openWebpage(modelo.link)">
         <!-- esto no funciona -->

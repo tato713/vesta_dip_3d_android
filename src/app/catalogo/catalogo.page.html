@@ -5,10 +5,10 @@
     </ion-buttons>
     <ion-title>Catálogo</ion-title>
     <ion-avatar slot="end">
-      <ion-badge class="cantidad pedido">pedido</ion-badge>
+      <ion-badge class="cantidad pedido">{{modSrv.getCantidadTotal()}}</ion-badge>
     <!-- <ion-badge class="cantidad pedido">{{carrito.length}}</ion-badge> -->
    </ion-avatar>
-   <ion-button slot="end" shape="round" color="medium">
+   <ion-button slot="end" shape="round" color="medium"  [routerLink]="['/carrito']">
      <ion-icon name="bag-handle-outline"></ion-icon>
    </ion-button>
   </ion-toolbar>
