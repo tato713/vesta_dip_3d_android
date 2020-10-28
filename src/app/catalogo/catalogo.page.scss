@@ -1,4 +1,20 @@
 ion-title {
-    color: teal;
-  
+  color: teal;
+
+}
+
+
+ion-badge{
+  position: absolute;
+  z-index: 1;    
+  top: 15px;
+  right: 15px;
+}
+.oval {
+    // height: 50px;
+    width: 95%;
+    // background-color: #555;
+    // border-radius: 50%;
+    border-radius: 200 px;
+   
   }

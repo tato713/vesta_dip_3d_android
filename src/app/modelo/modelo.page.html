@@ -39,16 +39,16 @@
       <ion-select-option [value]="item" *ngFor="let item of cantidades">{{item}}</ion-select-option>
     </ion-select>
   </ion-item>
-  <ion-item>
+  <!-- <ion-item>
     <ion-label type="number"> {{getCantidad()}} </ion-label>
     <ion-label> {{materiales[modelo.material].nombre}} </ion-label>
-  </ion-item>
+  </ion-item> -->
 
   <ion-item>
-    <ion-text color="dark">
-      <p>${{getPrecio()}}</p>
+    <ion-label>Costo: </ion-label>
+    <ion-label slot="end" *ngIf="getPrecio()==NaN" ></ion-label>
+    <ion-label slot="end" *ngIf="getPrecio()>0">${{getPrecio()}}</ion-label>
 
-    </ion-text>
   </ion-item>
 
   <!-- <ion-button (click)="presentAlert(getCantidad())" expand="block" color="dark"> -->

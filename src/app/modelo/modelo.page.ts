@@ -68,17 +68,11 @@ export class ModeloPage implements OnInit {
     // var b:number=Number(this.modelo.material.precio);
 
     return Number(this.modelo.precio)
-      // * Number(this.modelo.cantidad) 
-      // * Number(this.modSrv.materiales[this.modelo.material])
+      * Number(this.modelo.cantidad) 
+      * Number(this.modSrv.materiales[this.modelo.material].precio)
       ;
   }
 
-  /*   public setMaterial(mat:Material) {
-      console.log(mat);
-      this.modelo.material.id=mat.id; 
-      this.modelo.material.nombre=mat.nombre; 
-      this.modelo.material.precio=mat.precio; 
-    } */
 
   public agregarCarrito(): void {
     this.presentAlert();

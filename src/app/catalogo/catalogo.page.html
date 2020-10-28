@@ -3,28 +3,25 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title >Catálogo</ion-title>
+    <ion-title>Catálogo</ion-title>
     <ion-avatar slot="end">
-      <ion-badge class="cantidad pedido">{{modSrv.getCantidadTotal()}}</ion-badge>
-    <!-- <ion-badge class="cantidad pedido">{{carrito.length}}</ion-badge> -->
-   </ion-avatar>
-   <ion-button slot="end" shape="round" color="medium"  [routerLink]="['/carrito']">
-     <ion-icon name="bag-handle-outline"></ion-icon>
-   </ion-button>
+      <ion-badge>{{modSrv.getCantidadTotal()}}</ion-badge>
+    </ion-avatar>
+    <ion-button slot="end" shape="round" color="medium" [routerLink]="['/carrito']">
+      <ion-icon name="bag-handle-outline"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
 
-  <ion-content>
-    <ion-list>
-      <ion-item *ngFor="let item of modelos" [routerLink]="['/modelo',item.id]">
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of modelos" [routerLink]="['/modelo',item.id]">
 
-        <ion-avatar slot="start">
-          <img [src]="item.imagen"/></ion-avatar>
-        <ion-label>{{item.nombre}}</ion-label>
-        <ion-label>{{item.precio}}</ion-label><!-- 
-        <ion-label *ngIf="item.cantidad==0" color='danger'>SIN STOCK</ion-label>
-        <ion-label *ngIf="item.cantidad>0" color="primary">CON STOCK</ion-label> -->
-      </ion-item>  
-    </ion-list>
-  </ion-content>
+      <ion-avatar slot="start">
+        <img [src]="item.imagen" /></ion-avatar>
+      <ion-label>{{item.nombre}}</ion-label>
+      <ion-label>{{item.precio}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

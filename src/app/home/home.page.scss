@@ -25,41 +25,59 @@
 #container a {
   text-decoration: none;
 }
-ion-toolbar{
-  font-family: 'Ubuntu', sans-serif;
+ion-toolbar {
+  font-family: "Ubuntu", sans-serif;
   text-align: center;
-  
 }
 
 ion-title {
   color: teal;
 }
 
-//ion-icon { background-color: teal;}
+.slice1 {
+  background: url("https://i.ibb.co/F7qfgcn/OLYMPUS-DIGITAL-CAMERA.jpg  ");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.slice2 {
+  background: url("https://i.ibb.co/k8XSnp8/saturn-animation.gif");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.slice3 {
+  background: url("https://i.ibb.co/vjKCvKR/OLYMPUS-DIGITAL-CAMERA.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.slice4 {
+  background: url("https://i.ibb.co/k8XSnp8/saturn-animation.gif");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
 
 ion-slides {
-  background-repeat: no-repeat;
-  background-size: contain;
-  
-  // position: relative;
+  //ion-icon { background-color: teal;}
+
   height: 100%;
+
   // width: 100%;
   // text-align: center;
-  
 }
-ion-item {
-  height: 100%;
-  
-  //box-shadow: red; 
- 
-  
-}
+// ion-item {
+//   // height: 100%;
+
+//   //box-shadow: red;
+
+// }
 
 ion-label {
- color: darkslategray;
- 
+  color: darkslategray;
 }
 ion-img {
-height: 100%;
- background-size: cover;;
+  height: 100%;
+  background-size: cover;
 }

@@ -48,12 +48,16 @@ export class ModeloService {
     this.carrito.push(mod);
   
   }
-public getCantidadTotal():number {
-  let suma:number;
+public getCantidadTotal() {
+  var suma:number=0;
+  var este:number=0;
   for(let i of this.carrito){
-    suma+=i.cantidad;
+    este=Number(i.cantidad);
+    suma = suma + este;
   }
+  if(suma>0){
   return suma;
+  }
 }
 
   public getCarrito() {
