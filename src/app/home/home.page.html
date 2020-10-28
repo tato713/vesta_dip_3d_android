@@ -1,45 +1,49 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-    Vesta 3D - diseño, impresión y prototipado 
+      Vesta 3D - diseño, impresión y prototipado
     </ion-title>
-    <p> Envíos a todo el país</p>  
+    <p> Envíos a todo el país</p>
     <ion-avatar slot="end">
-       <ion-badge class="cantidad pedido">pedido</ion-badge>
-     <!-- <ion-badge class="cantidad pedido">{{carrito.length}}</ion-badge> -->
+      <ion-badge class="cantidad pedido">pedido</ion-badge>
+
     </ion-avatar>
     <ion-button slot="end" shape="round" color="medium">
       <ion-icon name="bag-handle-outline"></ion-icon>
     </ion-button>
-    
+
   </ion-toolbar>
-</ion-header> 
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
-      
-    <ion-slides pager>
-      <ion-slide>
-        <h1>1</h1>
-        <p>inicio pintoresco </p>
-      </ion-slide>
-      <ion-slide style="background-image: url(https://www.klaviyo.com/wp-content/uploads/2016/09/abstract-background-1024x273.jpg);">
-        <h1>2</h1>
-      </ion-slide>
-      <ion-slide >
-       
-        <ion-list lines="inset">
-          <ion-item [routerLink]="['/catalogo']">
-            <ion-label> <h1>Catálogo</h1> </ion-label>
-          </ion-item>
-          <ion-item [routerLink]="['/servicios']"> 
-            <ion-label > <h1>Servicios</h1> </ion-label>
-          </ion-item>
-          <ion-item [routerLink]="['/informacion']"> 
-            <ion-label > <h1>Sobre nosotros</h1> </ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-slide>
-    
-    </ion-slides>
-  <!-- </div> -->
-</ion-content>
+
+  <ion-slides pager>
+    <ion-slide style="background-image: url(https://i.ibb.co/k8XSnp8/saturn-animation.gif);" >
+     
+    </ion-slide>
+    <ion-slide>
+      <h1>2</h1>
+    </ion-slide>
+    <ion-slide>
+
+      <ion-list lines="inset">
+        <ion-item [routerLink]="['/catalogo']">
+          <ion-label>
+            <h1>Catálogo</h1>
+          </ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/servicios']">
+          <ion-label>
+            <h1>Servicios</h1>
+          </ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/informacion']">
+          <ion-label>
+            <h1>Sobre nosotros</h1>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+
+  </ion-slides>
+  </ion-content>

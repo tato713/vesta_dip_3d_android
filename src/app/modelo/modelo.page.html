@@ -5,9 +5,8 @@
     </ion-buttons>
     <ion-title>{{modelo.nombre}}</ion-title>
     <ion-avatar slot="end">
-      <ion-badge class="cantidad pedido">{{modSrv.getCantidadTotal()}}</ion-badge>
-      <!-- <ion-badge class="cantidad pedido">{{carrito.length}}</ion-badge> -->
-    </ion-avatar >
+      <ion-badge>{{modSrv.getCantidadTotal()}}</ion-badge>
+    </ion-avatar>
     <ion-button slot="end" shape="round" color="medium" [routerLink]="['/carrito']">
       <ion-icon name="bag-handle-outline"></ion-icon>
     </ion-button>
@@ -17,8 +16,8 @@
 <ion-content>
 
   <ion-item>
-    <div class="oval">
-      <ion-img [src]="modelo.imagen"></ion-img>
+    <div>
+      <ion-img [src]="modelo.imagen" class="oval"></ion-img>
       <ion-text color="dark" (ionClic)="openWebpage(modelo.link)">
         <!-- esto no funciona -->
         <p>Modelo disponible en <a href="modelo.link">Thingiverse</a>.</p> <!-- esto no funciona -->
@@ -32,16 +31,16 @@
       <ion-select-option [value]="item.id" *ngFor="let item of materiales">{{item.nombre}}</ion-select-option>
     </ion-select>
   </ion-item>
-  
+
   <ion-item>
     <ion-label>Cantidad:</ion-label>
     <!-- <ion-input  type="number" [(ngModel)]="modelo.cantidad" min="1" value="{{modelo.cantidad}}" ></ion-input> -->
-    <ion-select [value]="getCantidad()" [(ngModel)]="modelo.cantidad" interface="popover" >
+    <ion-select [value]="getCantidad()" [(ngModel)]="modelo.cantidad" interface="popover">
       <ion-select-option [value]="item" *ngFor="let item of cantidades">{{item}}</ion-select-option>
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label type ="number">   {{getCantidad()}} </ion-label>
+    <ion-label type="number"> {{getCantidad()}} </ion-label>
     <ion-label> {{materiales[modelo.material].nombre}} </ion-label>
   </ion-item>
 
@@ -53,7 +52,7 @@
   </ion-item>
 
   <!-- <ion-button (click)="presentAlert(getCantidad())" expand="block" color="dark"> -->
-    <ion-button (click)="agregarCarrito()" expand="block" color="dark">
+  <ion-button (click)="agregarCarrito()" expand="block" color="dark">
     <ion-icon slot="start" name="bag-handle-outline"></ion-icon>
     Agregar pedido
   </ion-button>

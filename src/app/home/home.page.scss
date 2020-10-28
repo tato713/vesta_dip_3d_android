@@ -31,20 +31,35 @@ ion-toolbar{
   
 }
 
+ion-title {
+  color: teal;
+}
+
 //ion-icon { background-color: teal;}
 
 ion-slides {
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+  // position: relative;
   height: 100%;
- // background-image: url(https://www.klaviyo.com/wp-content/uploads/2016/09/abstract-background-1024x273.jpg);
+  // width: 100%;
+  // text-align: center;
+  
 }
 ion-item {
+  height: 100%;
+  
   //box-shadow: red; 
-  text-align: center;
-  object-position: center;
+ 
   
 }
 
 ion-label {
  color: darkslategray;
  
+}
+ion-img {
+height: 100%;
+ background-size: cover;;
 }
